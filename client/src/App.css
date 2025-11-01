@@ -5,85 +5,46 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
+/* NAVBAR */
 .navbar {
-    background-color: #000; /* Black navbar */
-    padding: 0; /* No padding to align to the top left corner */
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Ensure navbar takes full width */
+  padding: 0; /* No padding to align to the top left corner */
+  z-index: 1000;          /* make sure it sits above everything else */
 }
 
 .navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    width: 100%; /* Ensure navbar takes full width */
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar li {
-    flex: 1; /* Make each button occupy equal space */
+  flex: 1; /* Make each button occupy equal space */
 }
 
 .navbar a {
-    display: block; /* Make the link fill the li */
-    color: white;
-    background-color: black;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 0;
-    text-align: center;
-    transition:
-    background-color 0.7s ease,
-    color 0.7s ease,
-    border-color 0.7s ease; /* Smooth transition for hover */
-    box-sizing: border-box; /* Include padding and border in element's total width */
+  display: block; /* Make the link fill the li */
+  padding: 10px 0;
+  text-align: center;
+  transition:
+  background-color 0.7s ease,
+  color 0.7s ease,
+  border-color 0.7s ease; /* Smooth transition for hover */
+  box-sizing: border-box; /* Include padding and border in element's total width */
 }
 
 .navbar a:hover {
-    background-color: white; /* Light hover effect */
-    color: black;
+  background-color: white; /* Light hover effect */
+  color: black;
 }
 
 .navbar a.active {
-    background-color: white; /* Highlight for active page */
-    color: black;
-}
-
-.navbar a.fade-out {
-    background-color: black;
-    color: white;
+  background-color: white; /* Highlight for active page */
+  color: black;
 }
