@@ -40,3 +40,50 @@
 .read-the-docs {
   color: #888;
 }
+
+.navbar {
+    background-color: #000; /* Black navbar */
+    padding: 0; /* No padding to align to the top left corner */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure navbar takes full width */
+}
+
+.navbar li {
+    flex: 1; /* Make each button occupy equal space */
+}
+
+.navbar a {
+    display: block; /* Make the link fill the li */
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+    transition:
+    background-color 0.7s ease,
+    color 0.7s ease,
+    border-color 0.7s ease; /* Smooth transition for hover */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.navbar a:hover {
+    background-color: white; /* Light hover effect */
+    color: black;
+}
+
+.navbar a.active {
+    background-color: white; /* Highlight for active page */
+    color: black;
+}
+
+.navbar a.fade-out {
+    background-color: black;
+    color: white;
+}
