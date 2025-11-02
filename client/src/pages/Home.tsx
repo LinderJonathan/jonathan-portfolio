@@ -1,7 +1,10 @@
 function Home() {
     return (
         <>
-            <h1>Hi, I'm Jonathan</h1>
+            <div className="main-message">
+                Hi, I'm Jonathan
+            </div>
+            
         </>
     )
 }
