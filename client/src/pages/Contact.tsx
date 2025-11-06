@@ -1,10 +1,20 @@
+import '../components/Container'
+import Container from '../components/Container'
+
 function Contact() {
     return (
         <>
-            <div className="main-message">
-                Contact me
-            </div>
-            // TODO: when done, add container
+            <Container
+                pageMessage='Contact me'
+                blocks={[
+                    {
+                        id:'1',
+                        description:'testing with only description'
+                    }
+                ]}
+
+            />
+
         </>
     )
 }

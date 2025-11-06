@@ -1,10 +1,20 @@
+import '../components/Container'
+import Container from '../components/Container'
+
 function Home() {
     return (
         <>
-            <div className="main-message">
-                Hi, I'm Jonathan
-            </div>
-            // TODO: when done, add container
+            <Container
+                pageMessage='Hi, Im Jonathan'
+                blocks={[
+                    {
+                        id:'1',
+                        description:'testing with only description'
+                    }
+                ]}
+
+            />
+
         </>
     )
 }
