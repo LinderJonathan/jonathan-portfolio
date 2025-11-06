@@ -1,26 +1,34 @@
 import '../components/ContainerBlock'
+import '../components/Container'
 import ContainerBlock from '../components/ContainerBlock'
+import Container from '../components/Container'
 
 function Portfolio() {
     return (
         <>
-            <div className="main-message">
-                Past Projects
-            </div>
-            <ContainerBlock
-                description='Project description 1'
-                imageSource='../src/assets/profileCropped.jpg'
-                subtitle='Project title 1'
-            />
-            <ContainerBlock
-                description='Project description 1'
-                imageSource='../src/assets/profileCropped.jpg'
-                subtitle='Project title 1'
-            />
-            <ContainerBlock
-                description='Project description 1'
-                imageSource='../src/assets/profileCropped.jpg'
-                subtitle='Project title 1'
+            <Container
+                pageMessage='Past Projects'
+                blocks={[
+                {
+                    id: '1',
+                    description:'Project description 1',
+                    imageSource:'../src/assets/profileCropped.jpg',
+                    subtitle:'Project title 1'
+                },
+                {
+                    id:'2',
+                    description:'Project description 1',
+                    imageSource:'../src/assets/profileCropped.jpg',
+                    subtitle:'Project title 1'
+                },
+                {
+                    id:'3',
+                    description:'Project description 1',
+                    imageSource:'../src/assets/profileCropped.jpg',
+                    subtitle:'Project title 1'
+                }
+
+            ]}
             />
         </>
     )

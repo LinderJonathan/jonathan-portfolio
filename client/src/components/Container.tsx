@@ -4,9 +4,12 @@ import '../components/ContainerBlock'
 import type {containerBlockProps} from "../components/ContainerBlock"
 import ContainerBlock from '../components/ContainerBlock'
 
-type containerProps = {blocks: ({ id: string } & containerBlockProps)[]}
+type containerProps = {
+  pageMessage: string
+  blocks: ({ id: string } & containerBlockProps)[]
+}
 
-function Container({blocks}: containerProps) {
+function Container({pageMessage, blocks}: containerProps) {
 
   const renderedBlocks = []
   var k = 0
@@ -24,14 +27,13 @@ function Container({blocks}: containerProps) {
       />
     </div>
     )
-
     k++
   }
   
   return (
     <>
       <div className="Container">
-        <h1 id="message" className="home-message">Hi, I'm Jonathan</h1>
+        <h1 id="message" className="pageMessage">{pageMessage}</h1>
       </div>
       {renderedBlocks}
     </>
