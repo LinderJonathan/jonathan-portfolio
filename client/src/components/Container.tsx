@@ -12,22 +12,19 @@ type containerProps = {
 function Container({pageMessage, blocks}: containerProps) {
 
   const renderedBlocks = []
-  var k = 0
+  var blockIndex = 0
 
-  // TODO: see if this works, give styling
   for (const block of blocks) {
-
     renderedBlocks.push(
-    <div className="containerBlock" id={k%2 === 0 ? "left" : "right"}>
       <ContainerBlock 
         key={block.id} 
         description={block.description}
         subtitle={block.subtitle}
         imageSource={block.imageSource}
+        align={blockIndex % 2 === 0 ? 'left' : 'right'}
       />
-    </div>
     )
-    k++
+    blockIndex++
   }
   
   return (

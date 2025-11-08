@@ -11,21 +11,21 @@ function Portfolio() {
                 blocks={[
                 {
                     id: '1',
-                    description:'Project description 1',
+                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laudantium necessitatibus inventore perferendis iusto omnis nam debitis ea modi nesciunt magnam praesentium, voluptatum magni quod! Cumque nobis deleniti eos dolor?',
                     imageSource:'../src/assets/profileCropped.jpg',
                     subtitle:'Project title 1'
                 },
                 {
                     id:'2',
-                    description:'Project description 1',
+                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laudantium necessitatibus inventore perferendis iusto omnis nam debitis ea modi nesciunt magnam praesentium, voluptatum magni quod! Cumque nobis deleniti eos dolor?',
                     imageSource:'../src/assets/profileCropped.jpg',
-                    subtitle:'Project title 1'
+                    subtitle:'Project title 2'
                 },
                 {
                     id:'3',
-                    description:'Project description 1',
+                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laudantium necessitatibus inventore perferendis iusto omnis nam debitis ea modi nesciunt magnam praesentium, voluptatum magni quod! Cumque nobis deleniti eos dolor?',
                     imageSource:'../src/assets/profileCropped.jpg',
-                    subtitle:'Project title 1'
+                    subtitle:'Project title 3'
                 }
 
             ]}
