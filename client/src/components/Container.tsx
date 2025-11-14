@@ -29,8 +29,10 @@ function Container({pageMessage, blocks}: containerProps) {
   
   return (
     <>
+      <div className="containerMessage">
+        <h1 className="pageMessage">{pageMessage}</h1>
+      </div>
       <div className="container">
-        <h1 id="message" className="pageMessage">{pageMessage}</h1>
         {renderedBlocks}
 
       </div>
