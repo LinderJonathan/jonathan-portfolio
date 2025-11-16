@@ -2,22 +2,25 @@ import '../App.css'
 
 export type containerBlockProps = {
     description: string
+    link?: string
+    linkLabel?: string
     subtitle?: string
     imageSource?: string
     align?: 'left' | 'right'
 }
 
-function ContainerBlock({ description, subtitle, imageSource, align }: containerBlockProps) {
+function ContainerBlock({ description, link, subtitle, imageSource, align }: containerBlockProps) {
     
     const hasImage = !!imageSource
     const hasSubtitle = !!subtitle
-    const blockClass = `containerBlock ${!hasImage && !hasSubtitle ? 'simple' : ''} ${align ?? ''}`
+    const hasLink = !!link
+    const blockClass = `containerBlock ${!hasLink && !hasImage && !hasSubtitle ? 'simple' : ''} ${align ?? ''}`
 
 
     return (
         <>
             <div className={blockClass}>
-            {imageSource && (
+                {imageSource && (
                     <img
                         src={imageSource}
                         alt="../assets/profileCropped.jpg"
@@ -28,6 +31,8 @@ function ContainerBlock({ description, subtitle, imageSource, align }: container
                 <div className='description'>
                     { description }
                 </div>
+                // TODO: add conditional on linkLabel
+                {subtitle && (<a href={link}>Github Link</a>)}
             </div>
 
         </>

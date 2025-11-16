@@ -12,6 +12,7 @@ function Portfolio() {
                 {
                     id: '1',
                     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laudantium necessitatibus inventore perferendis iusto omnis nam debitis ea modi nesciunt magnam praesentium, voluptatum magni quod! Cumque nobis deleniti eos dolor?',
+                    link:'https://stackoverflow.com/questions/30208108/make-part-of-the-text-as-link-react-localization',
                     subtitle:'Project title 1'
                 },
                 {
