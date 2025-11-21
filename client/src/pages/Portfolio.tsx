@@ -1,6 +1,5 @@
 import '../components/ContainerBlock'
 import '../components/Container'
-import ContainerBlock from '../components/ContainerBlock'
 import Container from '../components/Container'
 
 function Portfolio() {
