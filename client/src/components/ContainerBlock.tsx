@@ -3,7 +3,7 @@ import '../App.css'
 export type containerBlockProps = {
     description: string
     link?: string
-    linkLabel?: string
+    linkLabel   ?: string
     subtitle?: string
     imageSource?: string
     align?: 'left' | 'right'
@@ -31,7 +31,6 @@ function ContainerBlock({ description, link, subtitle, imageSource, align }: con
                 <div className='description'>
                     { description }
                 </div>
-                // TODO: add conditional on linkLabel
                 {subtitle && (<a href={link}>Github Link</a>)}
             </div>
 
