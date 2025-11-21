@@ -10,7 +10,7 @@ function Portfolio() {
                 pageMessage='Past Projects'
                 blocks={[
                 {
-                    id: '2',
+                    id: '1',
                     description:'In a 6 month collaboration with AstraZeneca as as master thesis worker, I explored how Large Language Models tuned for molecular discovery could benefit from contrastive learning',
                     subtitle:'AstraZeneca collaboration: Contrastive Learning for Molecular Representation'
                 },

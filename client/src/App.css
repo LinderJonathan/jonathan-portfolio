@@ -139,7 +139,6 @@
   border-radius: 10px;
   min-width: 650px;
   max-width: min(90%, 700px);
-  height: 500px;
   overflow: hidden;
   /* allow flex children to shrink properly */
   min-height: 0;
@@ -157,10 +156,7 @@
 }
 
 .containerBlock.simple .description {
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  right: 10px;
+
 
   font-size: 1.2em;
 }
