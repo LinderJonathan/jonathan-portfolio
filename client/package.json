@@ -1,6 +1,5 @@
 {
   "name": "client",
-  "homepage": "https://linderjonathan.github.io/jonathan-portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
