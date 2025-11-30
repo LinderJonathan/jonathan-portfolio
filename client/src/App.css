@@ -182,3 +182,40 @@
   margin-left: auto;
 }
 
+/* FOOTER */
+
+/* 
+  TODO: put footer in the bottom 
+  
+  1. Look how navbar does it
+
+  2.seems like width is inherited from #root: investigate
+*/
+.footer {
+  background: gray;
+  width: 100%;
+  height: 100px;
+}
+
+.footer  ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  flex: 1;
+}
+
+.footer a {
+  display: block;
+}
+  
+
+.footer img {
+  height: 50px;
+  width: auto;
+}

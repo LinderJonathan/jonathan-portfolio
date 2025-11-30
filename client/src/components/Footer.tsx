@@ -31,6 +31,7 @@ function Footer() {
                             </NavLink>
                         </li>
                         <li>
+
                             <NavLink to={instagramPath}>
                                 <img
                                     src={instagramLogo}
@@ -40,11 +41,8 @@ function Footer() {
                         </li>
                     </ul>
                 </div>
-                <div className="pageLinks">
-                    <ul>
-                        <li><NavLink to = {""}></NavLink></li>
-                    </ul>
-                </div>
+                
+
             </div>
         </>
     )
