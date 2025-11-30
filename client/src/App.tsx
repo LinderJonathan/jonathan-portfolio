@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import Portfolio from './pages/Portfolio'
@@ -17,6 +18,8 @@ function App() {
                 <Route path="/Contact" element={< Contact/>}/>
                 <Route path="/Portfolio" element={< Portfolio/>}/>
             </Routes>
+                
+            <Footer />
         </BrowserRouter>
     </>
     )

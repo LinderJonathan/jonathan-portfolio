@@ -3,35 +3,39 @@ import '../App.css'
 export type containerBlockProps = {
     description: string
     link?: string
-    linkLabel   ?: string
+    linkLabel?: string
+    title?: string
     subtitle?: string
     imageSource?: string
     align?: 'left' | 'right'
 }
 
-function ContainerBlock({ description, link, subtitle, imageSource, align }: containerBlockProps) {
+function ContainerBlock({ description, link, title, subtitle, imageSource, align }: containerBlockProps) {
     
     const hasImage = !!imageSource
+    const hasTitle = !!title
     const hasSubtitle = !!subtitle
     const hasLink = !!link
-    const blockClass = `containerBlock ${!hasLink && !hasImage && !hasSubtitle ? 'simple' : ''} ${align ?? ''}`
+    const blockClass = `containerBlock ${!hasLink && !hasImage && !hasTitle && !hasSubtitle ? 'simple' : ''} ${align ?? ''}`
 
 
     return (
         <>
             <div className={blockClass}>
+                <div className="projectTitle">
+                    {title && (<h2 className='title'>{title}</h2>)}
+                    {subtitle && (<h3 className='subtitle'>{subtitle}</h3>)}
+                </div>
                 {imageSource && (
                     <img
                         src={imageSource}
                         alt="../assets/profileCropped.jpg"
                     />
                 )}
-                {subtitle && (<h2 className='subtitle'>{subtitle}</h2>)}
-
                 <div className='description'>
                     { description }
                 </div>
-                {subtitle && (<a href={link}>Github Link</a>)}
+                {link && (<a href={link}>Github Link</a>)}
             </div>
 
         </>

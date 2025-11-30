@@ -19,6 +19,7 @@ function Container({pageMessage, blocks}: containerProps) {
       <ContainerBlock 
         key={block.id} 
         description={block.description}
+        title={block.title}
         subtitle={block.subtitle}
         imageSource={block.imageSource}
         align={blockIndex % 2 === 0 ? 'right' : 'left'}
