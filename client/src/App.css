@@ -31,6 +31,7 @@
   display: block;
   padding: 10px 0;
   text-align: center;
+  background-color: black;
   transition:
     background-color 0.7s ease,
     color 0.7s ease,
@@ -193,7 +194,7 @@
 */
 .footer {
   background: gray;
-  width: 100%;
+  width: 100vw;
   height: 100px;
 }
 
