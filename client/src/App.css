@@ -1,9 +1,13 @@
 #root {
   max-width: 1280px;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
 }
+
 
 
 /* NAVBAR */
@@ -69,7 +73,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
 }
 
 
@@ -196,19 +199,22 @@
   background: gray;
   width: 100vw;
   height: 100px;
+  margin-top: auto;
 }
+
 
 .footer  ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
+  gap: 3rem;
 }
 
 .footer li {
-  flex: 1;
+  flex: 0;
 }
 
 .footer a {
@@ -219,4 +225,5 @@
 .footer img {
   height: 50px;
   width: auto;
+  padding-top: 2rem;
 }

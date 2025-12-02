@@ -42,6 +42,7 @@ function Footer() {
                     </ul>
                 </div>
                 
+                // TODO: add section for extra contact info
 
             </div>
         </>
