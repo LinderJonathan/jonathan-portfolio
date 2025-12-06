@@ -85,8 +85,6 @@
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 20px;
-  border: 2px solid white;
-  border-radius: 10px;
   min-width: 650px;
   max-width: min(90%, 700px);
   height: 650px;
@@ -100,22 +98,15 @@
   flex: 1 1 auto;   /* behaves like the image space */
 }
 
-.containerBlock img {
-  flex: 1 1 auto;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 0;
-  min-height: 0;      /* IMPORTANT for flex children to not overflow */
-  mask-image: linear-gradient(to bottom, black 70%, transparent);
-}
-
 .containerBlock:not(.simple) .projectTitle {
   position: relative;
   padding-top: 20px;
-  font-size: 1.2em;
   z-index: 3;
+}
+
+.headerField h1 {
+  font-size: 4em;
+  margin: 0;
 }
 
 .projectTitle h2 {
@@ -129,7 +120,7 @@
 .containerBlock:not(.simple) .description {
   position: relative;
   padding: 20px;
-  font-size: 1.2em;
+  font-size: 1.0em;
   z-index: 2;
 }
 
@@ -141,8 +132,6 @@
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 20px;
-  border: 2px solid white;
-  border-radius: 10px;
   min-width: 650px;
   max-width: min(90%, 700px);
   overflow: hidden;
@@ -164,7 +153,7 @@
 .containerBlock.simple .description {
 
 
-  font-size: 1.2em;
+  font-size: 1.0em;
 }
 
 /* image: fill the flex area but stay behind by z-index 0 */
@@ -180,10 +169,26 @@
 
 .containerBlock.left {
   margin-right: auto;
+  border-right: 2px solid white;
+  text-align: right;
 }
 
 .containerBlock.right {
   margin-left: auto;
+  border-left: 2px solid white;
+  text-align: left;
+}
+
+.containerBlock.simple.left {
+  margin-right: auto;
+  border-right: 2px solid white;
+  text-align: right;
+}
+
+.containerBlock.simple.right {
+  margin-left: auto;
+  border-left: 2px solid white;
+  text-align: left;
 }
 
 /* FOOTER */
@@ -196,16 +201,35 @@
   2.seems like width is inherited from #root: investigate
 */
 .footer {
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
   background: gray;
-  width: 100vw;
-  height: 100px;
-  margin-top: auto;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 
-.footer  ul {
+.footer ul {
   list-style: none;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -213,8 +237,11 @@
   gap: 3rem;
 }
 
-.footer li {
-  flex: 0;
+@media (min-width: 768px) {
+  .footer ul {
+    flex-direction: column;
+
+  }
 }
 
 .footer a {
@@ -225,5 +252,4 @@
 .footer img {
   height: 50px;
   width: auto;
-  padding-top: 2rem;
 }

@@ -15,13 +15,16 @@ function Container({pageMessage, blocks}: containerProps) {
   var blockIndex = 0
 
   for (const block of blocks) {
+
     renderedBlocks.push(
       <ContainerBlock 
         key={block.id} 
         description={block.description}
+        header={block.header}
         title={block.title}
         subtitle={block.subtitle}
         imageSource={block.imageSource}
+        isCentered={block.isCentered}
         align={blockIndex % 2 === 0 ? 'right' : 'left'}
       />
     )

@@ -4,24 +4,51 @@ export type containerBlockProps = {
     description: string
     link?: string
     linkLabel?: string
+    header?: string
     title?: string
     subtitle?: string
     imageSource?: string
+    isCentered?: boolean
     align?: 'left' | 'right'
 }
 
-function ContainerBlock({ description, link, title, subtitle, imageSource, align }: containerBlockProps) {
+function ContainerBlock({
+    description,
+    link,
+    linkLabel,
+    header,
+    title,
+    subtitle,
+    imageSource,
+    isCentered,
+    align }: containerBlockProps) {
     
     const hasImage = !!imageSource
-    const hasTitle = !!title
     const hasSubtitle = !!subtitle
     const hasLink = !!link
-    const blockClass = `containerBlock ${!hasLink && !hasImage && !hasTitle && !hasSubtitle ? 'simple' : ''} ${align ?? ''}`
 
+    let classes = ['containerBlock'];
+    if (!hasLink && !hasImage && !hasSubtitle)
+    {
+        classes.push("simple");
+    }
+    if (isCentered)
+    {
+        classes.push("center");
+    }
+    else if (align)
+    {
+        classes.push(align);
+    }
+
+    const blockClass = classes.join(" ");
 
     return (
         <>
             <div className={blockClass}>
+                <div className="headerField">
+                    {header && (<h1 className='header'>{header}</h1>)}
+                </div>
                 <div className="projectTitle">
                     {title && (<h2 className='title'>{title}</h2>)}
                     {subtitle && (<h3 className='subtitle'>{subtitle}</h3>)}

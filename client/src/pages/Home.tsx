@@ -1,4 +1,3 @@
-import '../components/Container'
 import Container from '../components/Container'
 
 function Home() {
@@ -8,8 +7,16 @@ function Home() {
                 pageMessage='Hi, Im Jonathan'
                 blocks={[
                     {
-                        id:'1',
-                        description:'testing with only description'
+                        id: '1',
+                        header: 'Software Engineering',
+                        isCentered: true,
+                        description:''
+                    },
+                    {
+                        id: '2',
+                        header: 'Embedded Development',
+                        isCentered: true,
+                        description: ''
                     }
                 ]}
 
