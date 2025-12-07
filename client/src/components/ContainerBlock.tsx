@@ -1,7 +1,7 @@
 import '../App.css'
 
 export type containerBlockProps = {
-    description: string
+    description: React.ReactNode
     link?: string
     linkLabel?: string
     header?: string
