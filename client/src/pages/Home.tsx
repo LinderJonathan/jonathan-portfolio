@@ -4,18 +4,23 @@ function Home() {
     return (
         <>
             <Container
-                pageMessage='Hi, Im Jonathan'
                 blocks={[
                     {
                         id: '1',
-                        header: 'Software Engineering',
-                        isCentered: true,
+                        header: 'Hi, I am Jonathan',
+                        isCentered: false,
                         description:''
                     },
                     {
                         id: '2',
-                        header: 'Embedded Development',
-                        isCentered: true,
+                        header: 'Software Engineer...',
+                        isCentered: false,
+                        description: ''
+                    },
+                    {
+                        id: '3',
+                        header: '...Embedded Programming',
+                        isCentered: false,
                         description: ''
                     }
                 ]}

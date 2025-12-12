@@ -3,7 +3,7 @@ import '../components/ContainerBlock'
 import '../components/Container'
 import Container from '../components/Container'
 import microSensorSquareImg from '../assets/microSensorNet.png'
-import azImg from '../assets/profileCropped.jpg'
+import azImg from '../assets/az_test.png'
 
 function Portfolio() {
     return (

@@ -5,7 +5,7 @@ import type {containerBlockProps} from "../components/ContainerBlock"
 import ContainerBlock from '../components/ContainerBlock'
 
 type containerProps = {
-  pageMessage: string
+  pageMessage?: string
   blocks: ({ id: string } & containerBlockProps)[]
 }
 
@@ -34,7 +34,7 @@ function Container({pageMessage, blocks}: containerProps) {
   return (
     <>
       <div className="containerMessage">
-        <h1 className="pageMessage">{pageMessage}</h1>
+        {pageMessage && (<h1 className="pageMessage">{pageMessage}</h1>)}
       </div>
       <div className="container">
         {renderedBlocks}

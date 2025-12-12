@@ -5,20 +5,13 @@ function Contact() {
     return (
         <>
             <Container
-                pageMessage='Contact me'
                 blocks={[
                     {
-                        id:'1',
-                        description:'testing with only description'
+                        id: '1',
+                        header: 'Hi, I am Jonathan',
+                        isCentered: true,
+                        description:''
                     },
-                    {
-                        id:'1',
-                        description:'testing with only description'
-                    },
-                    {
-                        id:'1',
-                        description:'testing with only description'
-                    }
                 ]}
 
             />
