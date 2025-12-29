@@ -8,9 +8,14 @@ function Contact() {
                 blocks={[
                     {
                         id: '1',
-                        header: 'Hi, I am Jonathan',
+                        header: '',
                         isCentered: true,
-                        description:''
+                        description:
+                        <>
+                                <a href="../../public/CV.pdf">
+                                    CV
+                                </a>
+                        </>
                     },
                 ]}
 

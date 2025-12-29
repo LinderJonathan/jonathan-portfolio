@@ -29,7 +29,6 @@ function Footer() {
                 <div className="footer-row">
                     <ul className="imageLinks">
                         <li>linderjonathan3@gmail.com</li>
-                        <li>+46 73 388 75 07</li>
                         <li>Gotheburg, Sweden</li>
                     </ul>
                 </div>

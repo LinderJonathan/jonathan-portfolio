@@ -24,11 +24,11 @@ function Container({pageMessage, blocks}: containerProps) {
         title={block.title}
         subtitle={block.subtitle}
         imageSource={block.imageSource}
+        imageStyle={block.imageStyle}
         isCentered={block.isCentered}
-        align={blockIndex % 2 === 0 ? 'right' : 'left'}
+        align={block.align}
       />
     )
-    blockIndex++
   }
   
   return (

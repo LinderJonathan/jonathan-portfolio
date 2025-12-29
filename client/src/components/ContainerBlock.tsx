@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import '../App.css'
 
 export type containerBlockProps = {
@@ -8,6 +9,7 @@ export type containerBlockProps = {
     title?: string
     subtitle?: string
     imageSource?: string
+    imageStyle?: CSSProperties
     isCentered?: boolean
     align?: 'left' | 'right'
 }
@@ -20,6 +22,7 @@ function ContainerBlock({
     title,
     subtitle,
     imageSource,
+    imageStyle,
     isCentered,
     align }: containerBlockProps) {
     
@@ -32,11 +35,12 @@ function ContainerBlock({
     {
         classes.push("simple");
     }
+
     if (isCentered)
     {
         classes.push("center");
     }
-    else if (align)
+    else if (align && !isCentered)
     {
         classes.push(align);
     }
@@ -57,6 +61,7 @@ function ContainerBlock({
                     <img
                         src={imageSource}
                         alt="../assets/profileCropped.jpg"
+                        style={imageStyle}
                     />
                 )}
                 <div className='description'>
