@@ -12,7 +12,7 @@ function Contact() {
                         isCentered: true,
                         description:
                         <>
-                                <a href="../../public/CV.pdf">
+                                <a href="/jonathan-portfolio/CV.pdf">
                                     CV
                                 </a>
                         </>
