@@ -17,7 +17,6 @@ export type containerBlockProps = {
 function ContainerBlock({
     description,
     link,
-    linkLabel,
     header,
     title,
     subtitle,

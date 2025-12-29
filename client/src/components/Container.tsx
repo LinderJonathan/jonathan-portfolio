@@ -12,7 +12,6 @@ type containerProps = {
 function Container({pageMessage, blocks}: containerProps) {
 
   const renderedBlocks = []
-  var blockIndex = 0
 
   for (const block of blocks) {
 
